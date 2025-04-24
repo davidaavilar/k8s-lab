@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mi-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+        - name: saludo
+          valueFrom:
+            configMapKeyRef:
+              name: mi-configmap
+              key: saludo
