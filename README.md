@@ -1,5 +1,36 @@
 # Kubernetes Lab - Recursos Básicos
 
+## 🔍 Comandos básicos para explorar el clúster
+
+```bash
+# Ver la versión del cliente y del servidor
+kubectl version --short
+
+# Ver el estado general del clúster
+kubectl cluster-info
+
+# Ver los nodos del clúster
+kubectl get nodes
+
+# Ver detalles de un nodo
+kubectl describe node <nombre-del-nodo>
+
+# Ver todos los recursos en todos los namespaces
+kubectl get all --all-namespaces
+
+# Ver los namespaces
+kubectl get namespaces
+
+# Cambiar de namespace
+kubectl config set-context --current --namespace=<nombre-del-namespace>
+
+# Ver los contextos disponibles y el activo
+kubectl config get-contexts
+kubectl config current-context
+```
+
+# Kubernetes Lab - Recursos Básicos
+
 Este laboratorio te guía para desplegar recursos básicos de Kubernetes usando tanto comandos imperativos como manifiestos declarativos. Incluye:
 
 - ConfigMap
